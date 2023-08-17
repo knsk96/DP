@@ -3,27 +3,27 @@ services:
   aws:
     image: knsk96/aws:latest
     ports:
-      - "80:80"
+      - "90:80"
     deploy:
       replicas: 3
 
   devops:
     image: knsk96/devops:latest
     ports:
-      - "81:80"
+      - "91:80"
     deploy:
       replicas: 3
 
   linux:
     image: knsk96/linux:latest
     ports:
-      - "82:80"
+      - "92:80"
     deploy:
       replicas: 3
 
   azure:
     image: knsk96/azure:latest
     ports:
-      - "83:80"
+      - "93:80"
     deploy:
       replicas: 3
