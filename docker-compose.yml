@@ -1,29 +1,37 @@
 version: '3'
 services:
-  frog:
-    image: knsk96/frogrepostore:latest
+  aws:
+    image: knsk96/aws:latest
     ports:
       - "80:80"
+    volume:
+      - "awsvolume"
     deploy:
       replicas: 3
 
-  dog:
-    image: knsk96/dogrepostore:latest
+  devops:
+    image: knsk96/devops:latest
     ports:
       - "81:80"
+    volume:
+      - "devopsvolume"
     deploy:
       replicas: 3
 
-  cat:
-    image: knsk96/catrepostore:latest
+  linux:
+    image: knsk96/linux:latest
     ports:
       - "82:80"
+    volume:
+      - "linuxvolume"
     deploy:
       replicas: 3
 
-  ant:
-    image: knsk96/antrepostore:latest
+  azure:
+    image: knsk96/azure:latest
     ports:
       - "83:80"
+    volume:
+      - "azurevolume"
     deploy:
       replicas: 3
